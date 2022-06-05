@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        <%= name_of_title %>
+    </title>
+    <!-- bootrap links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- css link -->
+    <link rel="stylesheet" href="/css/index.css">
+    </head>
+
+
+    <body>
+        
+        <div class="header-dark">
+            <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+                <div class="container"><a class="navbar-brand" href="/"><img src="https://hsvha.org/wp-content/uploads/2020/06/news_logo_round2-300x300-1.png" width="120px" alt=""></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse"
+                        id="navcol-1">
+                        <form class="form-inline mr-auto" target="_self">
+                            <div class="form-group">
+                                <div class="navigation__item mx-3"><a href="/" class="text-light">Home</a></div>
+                                <div class="navigation__item"><a href="/add-news" class="text-light">Add new post</a></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>            
+        
+        
+        <section class="container">
+            <form class="row" action="/edit-news/<%= news._id %>" method="post">
+                <h1 class  = "text-center w-100">Edit post below</h1>
+                <div class="col-12">
+                  <label for="input1" class="form-label">Main title</label>
+                  <input type="text" value="<%= news.title %>" name = "title" required style="background-color:rgb(73, 95, 61);border: none;" class="form-control text-light" id="input1" placeholder="Breaking news">
+                </div>
+                <div class="col-12 my-2">
+                    <label for="input2" class="form-label">Sub title</label>
+                    <input type="text" value="<%= news.sub_title %>" name = "sub_title" required style="background-color:rgb(73, 95, 61);border: none;" class="form-control  text-light" id="input2" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit.">
+                </div>
+
+                <div class="col-12 my-2">
+                    <label for="input3"  class="form-label">Details of content</label>
+                    <input type="text" value="<%= news.details %>" name = "details" required style="background-color:rgb(73, 95, 61);border: none;"  class="form-control  text-light" id="input3" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquam consectetur velit? Aut, officiis! Eos nemo numquam quae">
+                </div>
+
+                <div class="col-12 my-2">
+                    <label for="input4"  class="form-label">Author of post</label>
+                    <input type="text" value="<%= news.post_author %>" name = "post_author" required style="background-color:rgb(73, 95, 61);border: none;"  class="form-control  text-light" id="input4" placeholder="Mike Steven">
+                </div>
+
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary w-100 mt-3">Edit  post</button>
+                </div>
+
+                </form>
+            </section>
+            
+            <script src="/javascript/main.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+        </body>
+        
+        </html>
