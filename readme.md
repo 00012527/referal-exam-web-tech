@@ -15,7 +15,7 @@ mongoose: ^6.3.5
 
 
 
-Link github
+Link github:https://github.com/00012527/referal-exam-web-tech
 
 
-Link heroku
+Link heroku: https://uzbek-news.herokuapp.com/
